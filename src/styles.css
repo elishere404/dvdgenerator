@@ -1,0 +1,106 @@
+input[type="file"] {
+  width: 350px;
+  max-width: 100%;
+  color: #444;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+input[type="file"]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: #0d45a5;
+}
+button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.frame {
+  border: 6px solid #007bff;
+  position: absolute;
+  animation: moveFrame 8s infinite linear, bounceFrame 1s infinite alternate,
+    fadeIn 1s;
+  transition: all 0.2s ease-in-out;
+}
+@keyframes moveFrame {
+  0%,
+  100% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: calc(100% - 412px);
+  }
+  50% {
+    top: calc(100% - 412px);
+    left: calc(100% - 412px);
+  }
+  75% {
+    top: calc(100% - 412px);
+    left: 0;
+  }
+  87.5% {
+    top: calc(50% - 206px);
+    left: calc(50% - 206px);
+  }
+}
+
+@keyframes bounceFrame {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-10px) scale(0.9);
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  animation: bounceImage 1s infinite alternate;
+}
+
+@keyframes bounceImage {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-10px) scale(0.9);
+  }
+}
